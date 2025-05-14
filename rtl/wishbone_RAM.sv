@@ -40,13 +40,13 @@ module wishbone_RAM (
     } RAM_Input_t;
 
     RAM_Input_t sel_0, sel_1;
-    logic [31:0] dout_0, dout_1;
+    wire [31:0] dout_0, dout_1;
 
     // Instantiate our modules
     DFFRAM256x32 RAM0(
         .CLK(clk), 
         .WE0(sel_0.we), // write enable
-        .EN0(1), // read enable (outputs 0 otherwise)
+        .EN0(!rst), // read enable (outputs 0 otherwise)
         .Di0(sel_0.din), // Data in
         .Do0(dout_0), 
         .A0(sel_0.addr)
@@ -54,7 +54,7 @@ module wishbone_RAM (
     DFFRAM256x32 RAM1(
         .CLK(clk), 
         .WE0(sel_1.we), // write enable
-        .EN0(1), // read enable (outputs 0 otherwise)
+        .EN0(!rst), // read enable (outputs 0 otherwise)
         .Di0(sel_1.din), // Data in
         .Do0(dout_1), 
         .A0(sel_1.addr)

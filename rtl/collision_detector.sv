@@ -52,9 +52,14 @@ module collision_detector(
             successful_B = tiebreaker;
         end
         else begin  // on no collision it's easy, just use the selections
-            sel0_useA = !a_ramsel;
-            successful_A = 1;
-            successful_B = 1;
+            if(`VALID_TRANSACTION_A)
+                sel0_useA = !a_ramsel;
+            else if(`VALID_TRANSACTION_B)
+                sel0_useA = b_ramsel;
+            else    
+                sel0_useA = 0; // just choose one 
+            successful_A = `VALID_TRANSACTION_A;
+            successful_B = `VALID_TRANSACTION_B;
         end
     end
     

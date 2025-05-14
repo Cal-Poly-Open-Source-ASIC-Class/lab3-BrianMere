@@ -16,37 +16,48 @@
     highlight_focused: None,
     fill_high_values: None,
     waves: Some((
-        source: File("/home/brianm/Documents/Repositories/ASIC/asic-tools/workspace/lab3-BrianMere/tests/tb_wishbone_RAM/tb_async_fifo.vcd"),
+        source: File("/home/brianm/Documents/Repositories/ASIC/asic-tools/workspace/lab3-BrianMere/tests/tb_wishbone_RAM/tb_wishbone_RAM.vcd"),
         format: Vcd,
         active_scope: Some(WaveScope((
             strs: [
                 "tb_wishbone_RAM",
                 "DUT",
-                "CD",
             ],
         ))),
         items_tree: (
             items: [
                 (
-                    item_ref: (3),
+                    item_ref: (88),
                     level: 0,
                     unfolded: true,
                     selected: false,
                 ),
                 (
-                    item_ref: (4),
+                    item_ref: (89),
                     level: 0,
                     unfolded: true,
                     selected: false,
                 ),
                 (
-                    item_ref: (6),
+                    item_ref: (86),
                     level: 0,
                     unfolded: true,
                     selected: false,
                 ),
                 (
-                    item_ref: (7),
+                    item_ref: (87),
+                    level: 0,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (113),
+                    level: 0,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (114),
                     level: 0,
                     unfolded: true,
                     selected: false,
@@ -66,13 +77,13 @@
                 (
                     item_ref: (56),
                     level: 0,
-                    unfolded: false,
+                    unfolded: true,
                     selected: false,
                 ),
                 (
                     item_ref: (73),
                     level: 1,
-                    unfolded: true,
+                    unfolded: false,
                     selected: false,
                 ),
                 (
@@ -192,6 +203,156 @@
                 (
                     item_ref: (32),
                     level: 1,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (103),
+                    level: 1,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (95),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (96),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (97),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (98),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (99),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (100),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (102),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (77),
+                    level: 1,
+                    unfolded: false,
+                    selected: false,
+                ),
+                (
+                    item_ref: (74),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (75),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (76),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (112),
+                    level: 1,
+                    unfolded: false,
+                    selected: false,
+                ),
+                (
+                    item_ref: (104),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (105),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (106),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (107),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (108),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (109),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (110),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (111),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (81),
+                    level: 1,
+                    unfolded: false,
+                    selected: false,
+                ),
+                (
+                    item_ref: (78),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (79),
+                    level: 2,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (80),
+                    level: 2,
                     unfolded: true,
                     selected: false,
                 ),
@@ -346,57 +507,9 @@
                     selected: false,
                 ),
                 (
-                    item_ref: (77),
-                    level: 1,
-                    unfolded: false,
-                    selected: false,
-                ),
-                (
-                    item_ref: (74),
-                    level: 2,
-                    unfolded: true,
-                    selected: false,
-                ),
-                (
-                    item_ref: (75),
-                    level: 2,
-                    unfolded: true,
-                    selected: false,
-                ),
-                (
-                    item_ref: (76),
-                    level: 2,
-                    unfolded: true,
-                    selected: false,
-                ),
-                (
-                    item_ref: (81),
-                    level: 1,
-                    unfolded: false,
-                    selected: false,
-                ),
-                (
-                    item_ref: (78),
-                    level: 2,
-                    unfolded: true,
-                    selected: false,
-                ),
-                (
-                    item_ref: (79),
-                    level: 2,
-                    unfolded: true,
-                    selected: false,
-                ),
-                (
-                    item_ref: (80),
-                    level: 2,
-                    unfolded: true,
-                    selected: false,
-                ),
-                (
                     item_ref: (28),
                     level: 0,
-                    unfolded: true,
+                    unfolded: false,
                     selected: false,
                 ),
                 (
@@ -456,7 +569,7 @@
                 (
                     item_ref: (29),
                     level: 0,
-                    unfolded: true,
+                    unfolded: false,
                     selected: false,
                 ),
                 (
@@ -513,10 +626,22 @@
                     unfolded: true,
                     selected: false,
                 ),
+                (
+                    item_ref: (93),
+                    level: 0,
+                    unfolded: true,
+                    selected: false,
+                ),
+                (
+                    item_ref: (94),
+                    level: 0,
+                    unfolded: true,
+                    selected: false,
+                ),
             ],
         ),
         displayed_items: {
-            (61): Variable((
+            (70): Variable((
                 variable_ref: (
                     path: (
                         strs: [
@@ -525,25 +650,18 @@
                             "CD",
                         ],
                     ),
-                    name: "pA_wb_cyc_i",
+                    name: "successful_A",
                 ),
                 color: None,
                 background_color: None,
-                display_name: "…CD.pA_wb_cyc_i",
+                display_name: "successful_A",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (28): Group((
-                name: "A Port",
-                color: Some("Orange"),
-                background_color: None,
-                content: [],
-                is_open: false,
-            )),
-            (37): Variable((
+            (38): Variable((
                 variable_ref: (
                     path: (
                         strs: [
@@ -551,23 +669,34 @@
                             "DUT",
                         ],
                     ),
-                    name: "pA_wb_cyc_i",
+                    name: "pA_wb_data_i",
                 ),
                 color: Some("Violet"),
                 background_color: None,
-                display_name: "…DUT.pA_wb_cyc_i",
+                display_name: "…DUT.pA_wb_data_i [31:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (56): Group((
-                name: "DUT",
-                color: Some("Violet"),
+            (13): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pA_wb_data_o",
+                ),
+                color: Some("Orange"),
                 background_color: None,
-                content: [],
-                is_open: false,
+                display_name: "tb_wishbone_RAM.pA_wb_data_o [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
             )),
             (74): Variable((
                 variable_ref: (
@@ -583,189 +712,6 @@
                 color: Some("Red"),
                 background_color: None,
                 display_name: "…sel_0.addr [7:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (42): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pA_wb_stb_i",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pA_wb_stb_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (33): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "dout_0",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "dout_0 [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (44): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pB_wb_ack_o",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pB_wb_ack_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (27): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "rst",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.rst",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (14): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pA_wb_sel_i",
-                ),
-                color: Some("Orange"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_sel_i [3:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (29): Group((
-                name: "B port",
-                color: Some("Gray"),
-                background_color: None,
-                content: [],
-                is_open: false,
-            )),
-            (43): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pA_wb_we_i",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pA_wb_we_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (40): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pA_wb_sel_i",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pA_wb_sel_i [3:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (5): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "clk",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.clk",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (77): Group((
-                name: "sel_0",
-                color: Some("Red"),
-                background_color: None,
-                content: [],
-                is_open: false,
-            )),
-            (65): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "pB_wb_cyc_i",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.pB_wb_cyc_i",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -791,40 +737,18 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (67): Variable((
+            (87): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
                         ],
                     ),
-                    name: "pB_wb_stb_i",
+                    name: "debug_dataB",
                 ),
                 color: None,
                 background_color: None,
-                display_name: "…CD.pB_wb_stb_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (60): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "pA_wb_ack_o",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.pA_wb_ack_o",
+                display_name: "debug_dataB [7:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -843,139 +767,6 @@
                 color: Some("Gray"),
                 background_color: None,
                 display_name: "tb_wishbone_RAM.pB_wb_cyc_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (26): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pB_wb_we_i",
-                ),
-                color: Some("Gray"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_we_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (23): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pB_wb_sel_i",
-                ),
-                color: Some("Gray"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_sel_i [3:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (47): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pB_wb_data_i",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pB_wb_data_i [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (68): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "rst",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.rst",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (11): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pA_wb_cyc_i",
-                ),
-                color: Some("Orange"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_cyc_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (66): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "pB_wb_stall_o",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.pB_wb_stall_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (62): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "pA_wb_stall_o",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.pA_wb_stall_o",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -1002,93 +793,74 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (38): Variable((
+            (12): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
-                            "DUT",
                         ],
                     ),
                     name: "pA_wb_data_i",
                 ),
-                color: Some("Violet"),
+                color: Some("Orange"),
                 background_color: None,
-                display_name: "…DUT.pA_wb_data_i [31:0]",
+                display_name: "tb_wishbone_RAM.pA_wb_data_i [31:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (4): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "addrB",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "addrB [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (19): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pB_wb_addr_i",
-                ),
-                color: Some("Gray"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_addr_i [10:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (18): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pB_wb_ack_o",
-                ),
-                color: Some("Gray"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_ack_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (70): Variable((
+            (32): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
                             "DUT",
-                            "CD",
                         ],
                     ),
-                    name: "successful_A",
+                    name: "clk",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.clk",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (82): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "clk",
                 ),
                 color: None,
                 background_color: None,
-                display_name: "successful_A",
+                display_name: "tb_wishbone_RAM.clk",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (51): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pB_wb_stb_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pB_wb_stb_i",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -1114,25 +886,59 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (9): Variable((
+            (81): Group((
+                name: "sel_1",
+                color: Some("Pink"),
+                background_color: None,
+                content: [],
+                is_open: false,
+            )),
+            (19): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
                         ],
                     ),
-                    name: "pA_wb_ack_o",
+                    name: "pB_wb_addr_i",
                 ),
-                color: Some("Orange"),
+                color: Some("Gray"),
                 background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_ack_o",
+                display_name: "tb_wishbone_RAM.pB_wb_addr_i [10:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (39): Variable((
+            (106): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "CLK",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "…RAM1.CLK",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (73): Group((
+                name: "CD",
+                color: Some("Green"),
+                background_color: None,
+                content: [],
+                is_open: false,
+            )),
+            (36): Variable((
                 variable_ref: (
                     path: (
                         strs: [
@@ -1140,31 +946,29 @@
                             "DUT",
                         ],
                     ),
-                    name: "pA_wb_data_o",
+                    name: "pA_wb_addr_i",
                 ),
                 color: Some("Violet"),
                 background_color: None,
-                display_name: "…DUT.pA_wb_data_o [31:0]",
+                display_name: "…DUT.pA_wb_addr_i [10:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (69): Variable((
+            (25): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
                         ],
                     ),
-                    name: "sel0_useA",
+                    name: "pB_wb_stb_i",
                 ),
-                color: None,
+                color: Some("Gray"),
                 background_color: None,
-                display_name: "…CD.sel0_useA",
+                display_name: "tb_wishbone_RAM.pB_wb_stb_i",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -1190,222 +994,115 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (15): Variable((
+            (23): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pA_wb_stall_o",
-                ),
-                color: Some("Orange"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_stall_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (45): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pB_wb_addr_i",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pB_wb_addr_i [10:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (55): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "sel0_useA_1",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "sel0_useA_1",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (7): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "dataB",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "dataB [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (25): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pB_wb_stb_i",
-                ),
-                color: Some("Gray"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_stb_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (53): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "rst",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.rst",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (12): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pA_wb_data_i",
-                ),
-                color: Some("Orange"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_data_i [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (3): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "addrA",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "addrA [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (83): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "rst",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "tb_wishbone_RAM.rst",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (49): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
                         ],
                     ),
                     name: "pB_wb_sel_i",
                 ),
-                color: Some("Violet"),
+                color: Some("Gray"),
                 background_color: None,
-                display_name: "…DUT.pB_wb_sel_i [3:0]",
+                display_name: "tb_wishbone_RAM.pB_wb_sel_i [3:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (75): Variable((
+            (102): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
                             "DUT",
-                            "sel_0",
+                            "RAM0",
                         ],
                     ),
-                    name: "din",
+                    name: "WE0",
                 ),
                 color: Some("Red"),
                 background_color: None,
-                display_name: "…sel_0.din [31:0]",
+                display_name: "…RAM0.WE0 [3:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (16): Variable((
+            (96): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "A_WIDTH",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…RAM0.A_WIDTH [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (31): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "b_ramsel",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.b_ramsel",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (17): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
                         ],
                     ),
-                    name: "pA_wb_stb_i",
+                    name: "pA_wb_we_i",
                 ),
                 color: Some("Orange"),
                 background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_stb_i",
+                display_name: "tb_wishbone_RAM.pA_wb_we_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (93): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "A0",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…RAM0.A0 [7:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -1432,7 +1129,25 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (35): Variable((
+            (5): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "clk",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.clk",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (33): Variable((
                 variable_ref: (
                     path: (
                         strs: [
@@ -1440,38 +1155,58 @@
                             "DUT",
                         ],
                     ),
-                    name: "pA_wb_ack_o",
+                    name: "dout_0",
                 ),
                 color: Some("Violet"),
                 background_color: None,
-                display_name: "…DUT.pA_wb_ack_o",
+                display_name: "dout_0 [31:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (17): Variable((
+            (111): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "WE0",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "…RAM1.WE0 [3:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (15): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
                         ],
                     ),
-                    name: "pA_wb_we_i",
+                    name: "pA_wb_stall_o",
                 ),
                 color: Some("Orange"),
                 background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_we_i",
+                display_name: "tb_wishbone_RAM.pA_wb_stall_o",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (73): Group((
-                name: "CD",
-                color: Some("Green"),
+            (112): Group((
+                name: "RAM1",
+                color: Some("Pink"),
                 background_color: None,
                 content: [],
                 is_open: false,
@@ -1495,65 +1230,45 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (85): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "valid_o",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "valid_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (80): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "sel_1",
-                        ],
-                    ),
-                    name: "we",
-                ),
-                color: Some("Pink"),
-                background_color: None,
-                display_name: "…sel_1.we [3:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (22): Variable((
+            (24): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
                         ],
                     ),
-                    name: "pB_wb_data_o",
+                    name: "pB_wb_stall_o",
                 ),
                 color: Some("Gray"),
                 background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_data_o [31:0]",
+                display_name: "tb_wishbone_RAM.pB_wb_stall_o",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (36): Variable((
+            (94): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "WE0",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…RAM0.WE0 [3:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (50): Variable((
                 variable_ref: (
                     path: (
                         strs: [
@@ -1561,36 +1276,18 @@
                             "DUT",
                         ],
                     ),
-                    name: "pA_wb_addr_i",
+                    name: "pB_wb_stall_o",
                 ),
                 color: Some("Violet"),
                 background_color: None,
-                display_name: "…DUT.pA_wb_addr_i [10:0]",
+                display_name: "…DUT.pB_wb_stall_o",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (82): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "clk",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "tb_wishbone_RAM.clk",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (6): Variable((
+            (88): Variable((
                 variable_ref: (
                     path: (
                         strs: [
@@ -1602,200 +1299,6 @@
                 color: None,
                 background_color: None,
                 display_name: "dataA [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (34): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "dout_1",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "dout_1 [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (48): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pB_wb_data_o",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pB_wb_data_o [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (58): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "b_ramsel",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.b_ramsel",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (57): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "a_ramsel",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.a_ramsel",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (72): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "tiebreaker",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "tiebreaker",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (51): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pB_wb_stb_i",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pB_wb_stb_i",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (32): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "clk",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.clk",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (64): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "pB_wb_ack_o",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "…CD.pB_wb_ack_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (31): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "b_ramsel",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.b_ramsel",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (46): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                        ],
-                    ),
-                    name: "pB_wb_cyc_i",
-                ),
-                color: Some("Violet"),
-                background_color: None,
-                display_name: "…DUT.pB_wb_cyc_i",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -1822,34 +1325,78 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (76): Variable((
+            (14): Variable((
                 variable_ref: (
                     path: (
                         strs: [
                             "tb_wishbone_RAM",
-                            "DUT",
-                            "sel_0",
                         ],
                     ),
-                    name: "we",
+                    name: "pA_wb_sel_i",
                 ),
-                color: Some("Red"),
+                color: Some("Orange"),
                 background_color: None,
-                display_name: "…sel_0.we [3:0]",
+                display_name: "tb_wishbone_RAM.pA_wb_sel_i [3:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
                 field_formats: [],
                 height_scaling_factor: None,
             )),
-            (81): Group((
-                name: "sel_1",
+            (37): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pA_wb_cyc_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pA_wb_cyc_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (107): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "Di0",
+                ),
                 color: Some("Pink"),
+                background_color: None,
+                display_name: "…RAM1.Di0 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (28): Group((
+                name: "A Port",
+                color: Some("Orange"),
                 background_color: None,
                 content: [],
                 is_open: false,
             )),
-            (50): Variable((
+            (77): Group((
+                name: "sel_0",
+                color: Some("Red"),
+                background_color: None,
+                content: [],
+                is_open: false,
+            )),
+            (40): Variable((
                 variable_ref: (
                     path: (
                         strs: [
@@ -1857,103 +1404,11 @@
                             "DUT",
                         ],
                     ),
-                    name: "pB_wb_stall_o",
+                    name: "pA_wb_sel_i",
                 ),
                 color: Some("Violet"),
                 background_color: None,
-                display_name: "…DUT.pB_wb_stall_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (13): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pA_wb_data_o",
-                ),
-                color: Some("Orange"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_data_o [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (10): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pA_wb_addr_i",
-                ),
-                color: Some("Orange"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pA_wb_addr_i [10:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (24): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pB_wb_stall_o",
-                ),
-                color: Some("Gray"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_stall_o",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (21): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                        ],
-                    ),
-                    name: "pB_wb_data_i",
-                ),
-                color: Some("Gray"),
-                background_color: None,
-                display_name: "tb_wishbone_RAM.pB_wb_data_i [31:0]",
-                display_name_type: Unique,
-                manual_name: None,
-                format: None,
-                field_formats: [],
-                height_scaling_factor: None,
-            )),
-            (71): Variable((
-                variable_ref: (
-                    path: (
-                        strs: [
-                            "tb_wishbone_RAM",
-                            "DUT",
-                            "CD",
-                        ],
-                    ),
-                    name: "successful_B",
-                ),
-                color: None,
-                background_color: None,
-                display_name: "successful_B",
+                display_name: "…DUT.pA_wb_sel_i [3:0]",
                 display_name_type: Unique,
                 manual_name: None,
                 format: None,
@@ -1980,34 +1435,1097 @@
                 field_formats: [],
                 height_scaling_factor: None,
             )),
+            (35): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pA_wb_ack_o",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pA_wb_ack_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (60): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "pA_wb_ack_o",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.pA_wb_ack_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (39): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pA_wb_data_o",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pA_wb_data_o [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (68): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "rst",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.rst",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (16): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pA_wb_stb_i",
+                ),
+                color: Some("Orange"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pA_wb_stb_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (49): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pB_wb_sel_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pB_wb_sel_i [3:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (108): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "Do0",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "…RAM1.Do0 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (95): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "A0",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…RAM0.A0 [7:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (57): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "a_ramsel",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.a_ramsel",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (9): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pA_wb_ack_o",
+                ),
+                color: Some("Orange"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pA_wb_ack_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (71): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "successful_B",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "successful_B",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (56): Group((
+                name: "DUT",
+                color: Some("Violet"),
+                background_color: None,
+                content: [],
+                is_open: false,
+            )),
+            (66): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "pB_wb_stall_o",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.pB_wb_stall_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (114): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "addrB",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "addrB [10:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (47): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pB_wb_data_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pB_wb_data_i [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (98): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "Di0",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…RAM0.Di0 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (99): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "Do0",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…RAM0.Do0 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (58): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "b_ramsel",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.b_ramsel",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (46): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pB_wb_cyc_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pB_wb_cyc_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (45): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pB_wb_addr_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pB_wb_addr_i [10:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (67): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "pB_wb_stb_i",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.pB_wb_stb_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (86): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "debug_dataA",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "debug_dataA [7:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (105): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "A_WIDTH",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "…RAM1.A_WIDTH [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (64): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "pB_wb_ack_o",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.pB_wb_ack_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (109): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "EN0",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "…RAM1.EN0",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (100): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "EN0",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…RAM0.EN0",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (55): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "sel0_useA_1",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "sel0_useA_1",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (83): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "rst",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "tb_wishbone_RAM.rst",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (75): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "sel_0",
+                        ],
+                    ),
+                    name: "din",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…sel_0.din [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (44): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pB_wb_ack_o",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pB_wb_ack_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (65): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "pB_wb_cyc_i",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.pB_wb_cyc_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (10): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pA_wb_addr_i",
+                ),
+                color: Some("Orange"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pA_wb_addr_i [10:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (22): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pB_wb_data_o",
+                ),
+                color: Some("Gray"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pB_wb_data_o [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (11): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pA_wb_cyc_i",
+                ),
+                color: Some("Orange"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pA_wb_cyc_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (103): Group((
+                name: "RAM0",
+                color: Some("Red"),
+                background_color: None,
+                content: [],
+                is_open: false,
+            )),
+            (29): Group((
+                name: "B port",
+                color: Some("Gray"),
+                background_color: None,
+                content: [],
+                is_open: false,
+            )),
+            (104): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "A0",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "…RAM1.A0 [7:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (26): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pB_wb_we_i",
+                ),
+                color: Some("Gray"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pB_wb_we_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (62): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "pA_wb_stall_o",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.pA_wb_stall_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (89): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "dataB",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "dataB [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (18): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pB_wb_ack_o",
+                ),
+                color: Some("Gray"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pB_wb_ack_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (85): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "valid_o",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "valid_o",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (48): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pB_wb_data_o",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pB_wb_data_o [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (42): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pA_wb_stb_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pA_wb_stb_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (80): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "sel_1",
+                        ],
+                    ),
+                    name: "we",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "…sel_1.we [3:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (21): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "pB_wb_data_i",
+                ),
+                color: Some("Gray"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.pB_wb_data_i [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (27): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "rst",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "tb_wishbone_RAM.rst",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (53): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "rst",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.rst",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (43): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "pA_wb_we_i",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "…DUT.pA_wb_we_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (69): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "sel0_useA",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.sel0_useA",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (97): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM0",
+                        ],
+                    ),
+                    name: "CLK",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…RAM0.CLK",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (113): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                        ],
+                    ),
+                    name: "addrA",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "addrA [10:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (72): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "tiebreaker",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "tiebreaker",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (34): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                        ],
+                    ),
+                    name: "dout_1",
+                ),
+                color: Some("Violet"),
+                background_color: None,
+                display_name: "dout_1 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (76): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "sel_0",
+                        ],
+                    ),
+                    name: "we",
+                ),
+                color: Some("Red"),
+                background_color: None,
+                display_name: "…sel_0.we [3:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (61): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "CD",
+                        ],
+                    ),
+                    name: "pA_wb_cyc_i",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "…CD.pA_wb_cyc_i",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
+            (110): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "tb_wishbone_RAM",
+                            "DUT",
+                            "RAM1",
+                        ],
+                    ),
+                    name: "NUM_WORDS",
+                ),
+                color: Some("Pink"),
+                background_color: None,
+                display_name: "NUM_WORDS [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+                height_scaling_factor: None,
+            )),
         },
-        display_item_ref_counter: 85,
+        display_item_ref_counter: 114,
         viewports: [
             (
-                curr_left: (-0.2),
-                curr_right: (1.2),
+                curr_left: (-0.1740715207517147),
+                curr_right: (1.225928479248285),
                 target_left: (-0.2),
-                target_right: (0.17142857142857143),
+                target_right: (1.2),
                 move_start_left: (-0.2),
-                move_start_right: (0.17142857142857143),
+                move_start_right: (1.2),
                 move_duration: None,
                 move_strategy: Instant,
             ),
         ],
         cursor: Some((1, [
-            32698,
+            55499,
         ])),
         markers: {},
         focused_item: None,
         focused_transaction: (None, None),
         default_variable_name_type: Unique,
-        scroll_offset: 0.0,
+        scroll_offset: 43.0,
         display_variable_indices: true,
         graphics: {},
     )),
-    drag_started: true,
+    drag_started: false,
     drag_source_idx: None,
-    drag_target_idx: None,
+    drag_target_idx: Some((
+        before: (51),
+        level: 1,
+    )),
     previous_waves: None,
     count: None,
     blacklisted_translators: [],
