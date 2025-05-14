@@ -3,7 +3,7 @@
 `define VALID_TRANSACTION_A (pA_wb_cyc_i)
 `define VALID_TRANSACTION_B (pB_wb_cyc_i)
 
-`define COLLISION (`VALID_TRANSACTION_A && `VALID_TRANSACTION_B && a_ramsel & b_ramsel)
+`define COLLISION (`VALID_TRANSACTION_A & `VALID_TRANSACTION_B & (a_ramsel == b_ramsel))
 
 /**
     Contains the output register to buffer to 
@@ -27,14 +27,14 @@ module collision_detector(
 
     // To/From top module 
     input logic a_ramsel, input logic b_ramsel, // what each port wants to use
-    output logic sel0_useA // indicates if RAM0 should use port A. Else uses port B.
+    output logic sel0_useA, // indicates if RAM0 should use port A. Else uses port B.
+    output logic successful_A, output logic successful_B // flag to indicate success of the transaction
 );
 
     // We want to register the choice of sel0_useA and sel1_useA so that 
     // We can reference these values after a collision
 
     logic tiebreaker; // on low, use A as the tiebreaker, else B. 
-    logic successful_A, successful_B; // flag to indicate success of the transaction
 
     // The calculation for sel0_useA and sel1_useB have to be in here.
     // This is because this has to be calculated before the clock goes high for a transaction
@@ -97,6 +97,14 @@ module collision_detector(
                 pB_wb_ack_o <= successful_B;
             end
         end
+    end
+
+    // JUST FOR DEBUGGING
+    logic debug_collision, validA, validB;
+    always_comb begin 
+        debug_collision = `COLLISION;
+        validA = `VALID_TRANSACTION_A;
+        validB = `VALID_TRANSACTION_B; 
     end
 
 endmodule

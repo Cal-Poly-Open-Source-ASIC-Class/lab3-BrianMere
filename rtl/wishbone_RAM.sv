@@ -2,6 +2,9 @@
 
 `define RAM_INPUT_WE(bus_4, we) (bus_4 & {4{we}})
 
+`define EN_RAM0 (!rst && ((sel0_useA && successful_A) || (!sel0_useA && successful_B)))
+`define EN_RAM1 (!rst && ((!sel0_useA && successful_A) || (sel0_useA && successful_B)))
+
 module wishbone_RAM (
 
     // Both Ports
@@ -46,7 +49,7 @@ module wishbone_RAM (
     DFFRAM256x32 RAM0(
         .CLK(clk), 
         .WE0(sel_0.we), // write enable
-        .EN0(!rst), // read enable (outputs 0 otherwise)
+        .EN0(`EN_RAM0), // read enable (outputs 0 otherwise)
         .Di0(sel_0.din), // Data in
         .Do0(dout_0), 
         .A0(sel_0.addr)
@@ -54,7 +57,7 @@ module wishbone_RAM (
     DFFRAM256x32 RAM1(
         .CLK(clk), 
         .WE0(sel_1.we), // write enable
-        .EN0(!rst), // read enable (outputs 0 otherwise)
+        .EN0(`EN_RAM1), // read enable (outputs 0 otherwise)
         .Di0(sel_1.din), // Data in
         .Do0(dout_1), 
         .A0(sel_1.addr)
@@ -100,6 +103,7 @@ module wishbone_RAM (
     
     // output: these are high when the associated RAM<n> should use portA. Otherwise use B. 
     logic sel0_useA;
+    logic successful_A, successful_B;
     // and make sure to register all outputs of the CD
     logic sel0_useA_1;
     always_ff @( posedge clk ) begin 

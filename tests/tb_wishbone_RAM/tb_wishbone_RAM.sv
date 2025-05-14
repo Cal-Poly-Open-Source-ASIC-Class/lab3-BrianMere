@@ -91,15 +91,18 @@ always begin : MainTB
         WriteTest(addrA, addrB, dataA[7:0], dataB[7:0], 0);
 
         // A alone, B alone (words)
-        $display("Words: [%h] => A@0x%h, [%h] => B@0x%h", dataA, addrA, dataB, addrB);
-       // WriteWordTest(addrA[10:0], addrB[10:0], dataA, dataB);
+        $display("Words: [%h] => A@0x%h, [%h] => B@0x%h", dataA, addrA & ~11'b11, dataB, addrB & ~11'b11);
+        WriteWordTest(addrA & ~11'b11, addrB & ~11'b11, dataA, dataB);
 
         // A, B together (stall)
+        generateValues();
         addrA = addrB;
-        $display("Stall: [%h] => A@0x%h, [%h] => B@0x%h",, dataA[7:0], addrA, dataB[7:0], addrB);
+        $display("Stall: [%h] => A@0x%h, [%h] => B@0x%h", dataA[7:0], addrA, dataB[7:0], addrB);
         WriteTest(addrA, addrB, dataA[7:0], dataB[7:0], 1);
-        $display("Stall w/ Words: [%h] => A@0x%h, [%h] => B@0x%h", dataA, addrA, dataB, addrB);
-        //WriteWordTest(addrA[10:0], addrB[10:0], dataA, dataB);
+        generateValues();
+        addrA = addrB;
+        $display("Stall w/ Words: [%h] => A@0x%h, [%h] => B@0x%h", dataA, addrA & ~11'b11, dataB, addrB & ~11'b11);
+        WriteWordTest(addrA & ~11'b11, addrB & ~11'b11, dataA, dataB);
     end
 
     $finish;
@@ -178,14 +181,14 @@ endtask
 task writeInput(input logic[10:0] waddr, input logic[7:0] wdata, input logic use_A = 1);
     if(use_A) begin 
         pA_wb_addr_i = waddr;
-        pA_wb_data_i = {24'b0, wdata};
+        pA_wb_data_i = {24'b0, wdata} << (8 * waddr[1:0] );
         pA_wb_we_i   = 1;
         pA_wb_sel_i  = 1 << waddr[1:0];
         pA_wb_stb_i  = 1;
         pA_wb_cyc_i  = 1;
     end else begin 
         pB_wb_addr_i = waddr;
-        pB_wb_data_i = {24'b0, wdata};
+        pB_wb_data_i = {24'b0, wdata} << (8 * waddr[1:0] );
         pB_wb_we_i   = 1;
         pB_wb_sel_i  = 1 << waddr[1:0];
         pB_wb_stb_i  = 1;
@@ -231,8 +234,22 @@ task automatic ReadTest(input logic[10:0] raddrA, input logic[10:0] raddrB, inpu
         #TIME_PERIOD;
         if(doA) endInput(1);
         if(doA) endInput(0);
-        if(doA) assert({24'b0, rdataA} == pA_wb_data_o) else $error("A: Read data was expected %h but got %h", {24'b0, rdataA}, pA_wb_data_o);
-        if(doB) assert({24'b0, rdataB} == pB_wb_data_o) else $error("B: Read data was expected %h but got %h", {24'b0, rdataB}, pB_wb_data_o);
+        if (doA && doB) begin 
+            assert(
+                (({24'b0, rdataA} << (8 * raddrA[1:0] )) == pA_wb_data_o) ||
+                (({24'b0, rdataB} << (8 * raddrB[1:0] )) == pB_wb_data_o)
+            ) else $error(
+                "Stall: Combined R/W gave an output of neither inputs. See previous displays, but we got outputs A=>0x%h exp: %h and B=>0x%h exp: %h", 
+                pA_wb_data_o, ({24'b0, rdataA} << (8 * raddrA[1:0] )),
+                pB_wb_data_o, ({24'b0, rdataB} << (8 * raddrB[1:0] ))
+            );
+        end
+        begin 
+            if(doA) assert(({24'b0, rdataA} << (8 * raddrA[1:0] )) == pA_wb_data_o) else $error("A: Read data was expected %h but got %h", 
+                ({24'b0, rdataA} << (8 * raddrA[1:0] )), pA_wb_data_o);
+            if(doB) assert(({24'b0, rdataB} << (8 * raddrB[1:0] )) == pB_wb_data_o) else $error("B: Read data was expected %h but got %h", 
+                ({24'b0, rdataB} << (8 * raddrB[1:0] )), pB_wb_data_o);
+        end
         if(doA) endOutput(1);
         if(doB) endOutput(0);
     end else begin 
@@ -241,7 +258,8 @@ task automatic ReadTest(input logic[10:0] raddrA, input logic[10:0] raddrB, inpu
             readInput(raddrA, 1);
             #TIME_PERIOD;
             endInput(1);
-            assert({24'b0, rdataA} == pA_wb_data_o) else $error("A: Read data was expected %h but got %h", {24'b0, rdataA}, pA_wb_data_o);
+            assert(({24'b0, rdataA} << (8 * raddrA[1:0] )) == pA_wb_data_o) else $error("A: Read data was expected %h but got %h", 
+                ({24'b0, rdataA} << (8 * raddrA[1:0] )), pA_wb_data_o);
             endOutput(1);
         end
 
@@ -250,7 +268,8 @@ task automatic ReadTest(input logic[10:0] raddrA, input logic[10:0] raddrB, inpu
             readInput(raddrB, 0);
             #TIME_PERIOD;
             endInput(0);
-            assert({24'b0, rdataB} == pB_wb_data_o) else $error("B: Read data was expected %h but got %h", {24'b0, rdataB}, pB_wb_data_o);
+            assert(({24'b0, rdataB} << (8 * raddrB[1:0] )) == pB_wb_data_o) else $error("B: Read data was expected %h but got %h", 
+                ({24'b0, rdataB} << (8 * raddrB[1:0] )), pB_wb_data_o);
             endOutput(0);
         end
     end
@@ -265,6 +284,7 @@ task automatic WriteTest(input logic[10:0] waddrA, input logic[10:0] waddrB, inp
     if(clock) begin 
         writeInput(waddrA, wdataA, 1);
         writeInput(waddrB, wdataB, 0);
+        #TIME_PERIOD;
         #TIME_PERIOD;
         endInput(1);
         endInput(0);
@@ -290,21 +310,83 @@ task automatic WriteTest(input logic[10:0] waddrA, input logic[10:0] waddrB, inp
 endtask
 
 /** Tests reads on separate ports (see soleReadTest()) but now by word, which must clock together here (assume you did more granular tests like Read/WriteTest) */
-task automatic ReadWordTest(input logic[10:0] raddrA, input logic[10:0] raddrB, input logic [31:0] rdataA, input logic[31:0] rdataB);
-    ReadTest(raddrA<<2, raddrB<<2, 0,0, 1, 0); // do a ReadTest with no asserts
-    assert(pA_wb_data_o == rdataA) else $error("A: Tried reading word got %h expected %h", pA_wb_data_o, rdataA);
-    assert(pB_wb_data_o == rdataB) else $error("B: Tried reading word got %h expected %h", pB_wb_data_o, rdataB);
-    endOutput(1);
-    endOutput(0);
+task automatic ReadWordTest(input logic[10:0] raddrA, input logic[10:0] raddrB, input logic [31:0] rdataA, input logic[31:0] rdataB, input logic clock = 1,
+    input logic doA = 1, input logic doB = 1);
+    endInput(0);
+    endInput(1);
+
+    if(clock) begin 
+        if(doA) readInput(raddrA, 1);
+        if(doB) readInput(raddrB, 0);
+        #TIME_PERIOD;
+        if(doA) endInput(1);
+        if(doA) endInput(0);
+        if(doA && doB) begin 
+            assert(pA_wb_data_o == rdataA || pB_wb_data_o == rdataB) 
+            else $error(
+                "Stall (Word): Combined R/W gave an output of neither inputs. See previous displays, but we got outputs A=>0x%h exp: %h and B=>0x%h exp: %h", 
+                pA_wb_data_o, rdataA,
+                pB_wb_data_o, rdataB
+            );
+        end else begin
+            if(doA) assert(pA_wb_data_o == rdataA) else $error("A: Tried reading word got %h expected %h", pA_wb_data_o, rdataA);
+            if(doB) assert(pB_wb_data_o == rdataB) else $error("B: Tried reading word got %h expected %h", pB_wb_data_o, rdataB);
+        end
+        if(doA) endOutput(1);
+        if(doB) endOutput(0);
+    end else begin 
+        if(doA) begin
+            // A case:
+            readInput(raddrA, 1);
+            #TIME_PERIOD;
+            endInput(1);
+            assert(pA_wb_data_o == rdataA) else $error("A: Tried reading word got %h expected %h", pA_wb_data_o, rdataA);
+            endOutput(1);
+        end
+
+        if(doB) begin
+            // B case:
+            readInput(raddrB, 0);
+            #TIME_PERIOD;
+            endInput(0);
+            assert(pB_wb_data_o == rdataB) else $error("B: Tried reading word got %h expected %h", pB_wb_data_o, rdataB);
+            endOutput(0);
+        end
+    end    
 endtask
 
 /** Tests writes on separate ports (see soleReadTest()) but now by word, which must clock together here (assume you did more granular tests like Read/WriteTest) */
-// task automatic WriteWordTest(input logic[10:0] waddrA, input logic[10:0] waddrB, input logic [31:0] wdataA, input logic[31:0] wdataB);
-//     WriteTest(waddrA<<2, waddrB<<2, wdataA, wdataB, 1); // do a ReadTest with no asserts
-//     $display("Actual Asserting of Writes");
-//     ReadWordTest(waddrA, waddrB, wdataA, wdataB);
-//     endOutput(1);
-//     endOutput(0);
-// endtask
+task automatic WriteWordTest(input logic[10:0] waddrA, input logic[10:0] waddrB, input logic [31:0] wdataA, input logic[31:0] wdataB, input logic clock = 1, 
+    input logic doA = 1, input logic doB = 1);
+    endWriteInput(0);
+    endWriteInput(1);
+
+    if(clock) begin 
+        writeInputWord(waddrA, wdataA, 1);
+        writeInputWord(waddrB, wdataB, 0);
+        #TIME_PERIOD;
+        #TIME_PERIOD;
+        endInput(1);
+        endInput(0);
+        $display("Write test BOTH:::");
+        ReadWordTest(waddrA, waddrB, wdataA, wdataB, clock, 1, 1);
+    end else begin 
+        // A case:
+        writeInputWord(waddrA, wdataA, 1);
+        #TIME_PERIOD;
+        endWriteInput(1);
+        $display("Write test A:::");
+        ReadWordTest(waddrA, waddrB, wdataA, wdataB, clock, 1, 0);
+        
+        // B case:
+        writeInputWord(waddrB, wdataB, 0);
+        #TIME_PERIOD;
+        endWriteInput(0);
+        $display("Write test B:::");
+        ReadWordTest(waddrA, waddrB, wdataA, wdataB, clock, 0, 1);
+    end
+    endOutput(1);
+    endOutput(0);
+endtask
 
 endmodule
