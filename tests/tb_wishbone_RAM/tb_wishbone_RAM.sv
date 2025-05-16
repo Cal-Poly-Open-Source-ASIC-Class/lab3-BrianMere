@@ -96,11 +96,11 @@ always begin : MainTB
 
         // A, B together (stall)
         generateValues();
-        addrA = addrB;
+        addrA = addrB; addrA[4] = ~addrA[4];
         $display("Stall: [%h] => A@0x%h, [%h] => B@0x%h", dataA[7:0], addrA, dataB[7:0], addrB);
         WriteTest(addrA, addrB, dataA[7:0], dataB[7:0], 1);
         generateValues();
-        addrA = addrB;
+        addrA = addrB; addrA[4] = ~addrA[4];
         $display("Stall w/ Words: [%h] => A@0x%h, [%h] => B@0x%h", dataA, addrA & ~11'b11, dataB, addrB & ~11'b11);
         WriteWordTest(addrA & ~11'b11, addrB & ~11'b11, dataA, dataB);
     end
@@ -236,19 +236,21 @@ task automatic ReadTest(input logic[10:0] raddrA, input logic[10:0] raddrB, inpu
         if(doA) endInput(0);
         if (doA && doB) begin 
             assert(
-                (({24'b0, rdataA} << (8 * raddrA[1:0] )) == pA_wb_data_o) ||
-                (({24'b0, rdataB} << (8 * raddrB[1:0] )) == pB_wb_data_o)
+                (({24'b0, rdataA} << (8 * raddrA[1:0] )) == (pA_wb_data_o & (32'hFF << (8 * raddrA[1:0])))) ||
+                (({24'b0, rdataB} << (8 * raddrB[1:0] )) == (pB_wb_data_o & (32'hFF << (8 * raddrB[1:0]))))
             ) else $error(
                 "Stall: Combined R/W gave an output of neither inputs. See previous displays, but we got outputs A=>0x%h exp: %h and B=>0x%h exp: %h", 
-                pA_wb_data_o, ({24'b0, rdataA} << (8 * raddrA[1:0] )),
-                pB_wb_data_o, ({24'b0, rdataB} << (8 * raddrB[1:0] ))
+                (pA_wb_data_o & (32'hFF << (8 * raddrA[1:0]))), ({24'b0, rdataA} << (8 * raddrA[1:0] )),
+                (pB_wb_data_o & (32'hFF << (8 * raddrB[1:0]))), ({24'b0, rdataB} << (8 * raddrB[1:0] )), 
             );
         end
-        begin 
-            if(doA) assert(({24'b0, rdataA} << (8 * raddrA[1:0] )) == pA_wb_data_o) else $error("A: Read data was expected %h but got %h", 
-                ({24'b0, rdataA} << (8 * raddrA[1:0] )), pA_wb_data_o);
-            if(doB) assert(({24'b0, rdataB} << (8 * raddrB[1:0] )) == pB_wb_data_o) else $error("B: Read data was expected %h but got %h", 
-                ({24'b0, rdataB} << (8 * raddrB[1:0] )), pB_wb_data_o);
+        else begin 
+            if(doA) assert((({24'b0, rdataA} << (8 * raddrA[1:0] )) == (pA_wb_data_o & (32'hFF << (8 * raddrA[1:0]))))) 
+                else $error("A: Read data was expected %h but got %h", 
+                ({24'b0, rdataA} << (8 * raddrA[1:0] )), (pA_wb_data_o & (32'hFF << (8 * raddrA[1:0]))), ({24'b0, rdataA} << (8 * raddrA[1:0] )));
+            if(doB) assert((({24'b0, rdataB} << (8 * raddrB[1:0] )) == (pB_wb_data_o & (32'hFF << (8 * raddrB[1:0]))))) 
+                else $error("B: Read data was expected %h but got %h", 
+                ({24'b0, rdataB} << (8 * raddrB[1:0] )), (pB_wb_data_o & (32'hFF << (8 * raddrB[1:0]))), ({24'b0, rdataB} << (8 * raddrB[1:0] )));
         end
         if(doA) endOutput(1);
         if(doB) endOutput(0);
@@ -258,8 +260,8 @@ task automatic ReadTest(input logic[10:0] raddrA, input logic[10:0] raddrB, inpu
             readInput(raddrA, 1);
             #TIME_PERIOD;
             endInput(1);
-            assert(({24'b0, rdataA} << (8 * raddrA[1:0] )) == pA_wb_data_o) else $error("A: Read data was expected %h but got %h", 
-                ({24'b0, rdataA} << (8 * raddrA[1:0] )), pA_wb_data_o);
+            assert(({24'b0, rdataA} << (8 * raddrA[1:0] )) == (pA_wb_data_o & (32'hFF << (8 * raddrA[1:0])))) else $error("A: Read data was expected %h but got %h", 
+                ({24'b0, rdataA} << (8 * raddrA[1:0] )), (pA_wb_data_o & (32'hFF << (8 * raddrA[1:0]))));
             endOutput(1);
         end
 
@@ -268,8 +270,8 @@ task automatic ReadTest(input logic[10:0] raddrA, input logic[10:0] raddrB, inpu
             readInput(raddrB, 0);
             #TIME_PERIOD;
             endInput(0);
-            assert(({24'b0, rdataB} << (8 * raddrB[1:0] )) == pB_wb_data_o) else $error("B: Read data was expected %h but got %h", 
-                ({24'b0, rdataB} << (8 * raddrB[1:0] )), pB_wb_data_o);
+            assert(({24'b0, rdataB} << (8 * raddrB[1:0] )) == (pB_wb_data_o & (32'hFF << (8 * raddrB[1:0])))) else $error("B: Read data was expected %h but got %h", 
+                ({24'b0, rdataB} << (8 * raddrB[1:0] )), (pB_wb_data_o & (32'hFF << (8 * raddrB[1:0]))));
             endOutput(0);
         end
     end
