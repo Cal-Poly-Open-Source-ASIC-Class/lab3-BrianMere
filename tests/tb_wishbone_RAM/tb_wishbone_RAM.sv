@@ -45,25 +45,6 @@ initial begin
     $dumpvars(0);
 end
 
-// Random seeded number generator for tests
-function automatic logic [63:0] lsfr(input logic [63:0] current);
-  logic feedback;
-  feedback = current[63] ^ current[62] ^ current[60] ^ current[59];
-  return {current[62:0], feedback};
-endfunction
-logic [63:0] lfsr_v;
-initial begin
-  lfsr_v = 64'hDEADBEEFCAFEBABE; // seed — must not be 0
-end
-task automatic random_switch(output logic [63:0] out);
-  lfsr_v = lsfr(lfsr_v);
-  out = lfsr_v;
-endtask
-function automatic logic [63:0] random();
-    logic [63:0] out;
-    random_switch(out);
-    return out;
-endfunction
 
 localparam TIME_PERIOD = 10;
 initial begin
@@ -109,11 +90,12 @@ always begin : MainTB
 end
 
 /** generate values for the addresses and data's */
+logic [31:0] temp;
 task generateValues();
-    addrA = random()[10:0];
-    addrB = random()[10:0];
-    dataA = random()[31:0];
-    dataB = random()[31:0];
+    temp = $random; addrA = temp[10:0];
+    temp = $random; addrB = temp[10:0];
+    temp = $random; dataA = temp[31:0];
+    temp = $random; dataB = temp[31:0];
     debug_dataA = dataA[7:0];
     debug_dataB = dataB[7:0];
 endtask

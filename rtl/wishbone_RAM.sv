@@ -45,6 +45,28 @@ module wishbone_RAM (
     RAM_Input_t sel_0, sel_1;
     wire [31:0] dout_0, dout_1;
 
+    // DEFINE what logic we need from the CD here...
+
+    // input: Selectors of what ram the port<n> WANTS to use
+    logic a_ramsel, b_ramsel;
+    
+    // output: these are high when the associated RAM<n> should use portA. Otherwise use B. 
+    logic sel0_useA;
+    logic successful_A, successful_B;
+    // and make sure to register all outputs of the CD
+    logic sel0_useA_1;
+    always_ff @( posedge clk ) begin 
+        if(rst) begin
+            sel0_useA_1 <= 0;
+        end
+        else begin 
+            sel0_useA_1 <= sel0_useA;
+        end
+    end
+
+    // END DEFINE
+    collision_detector CD(.*);
+
     // Instantiate our modules
     DFFRAM256x32 RAM0(
         .CLK(clk), 
@@ -95,28 +117,6 @@ module wishbone_RAM (
         a_ramsel = pA_wb_addr_i[10];
         b_ramsel = pB_wb_addr_i[10];
     end
-
-    // DEFINE what logic we need from the CD here...
-
-    // input: Selectors of what ram the port<n> WANTS to use
-    logic a_ramsel, b_ramsel;
-    
-    // output: these are high when the associated RAM<n> should use portA. Otherwise use B. 
-    logic sel0_useA;
-    logic successful_A, successful_B;
-    // and make sure to register all outputs of the CD
-    logic sel0_useA_1;
-    always_ff @( posedge clk ) begin 
-        if(rst) begin
-            sel0_useA_1 <= 0;
-        end
-        else begin 
-            sel0_useA_1 <= sel0_useA;
-        end
-    end
-
-    // END DEFINE
-    collision_detector CD(.*);
 
     // Given dout_0 and dout_1, using the staggered sel0_useA... values get the output
     // data to the right place
