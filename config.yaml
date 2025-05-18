@@ -1,0 +1,105 @@
+{
+    "DESIGN_NAME": "wishbone_RAM",
+    "VERILOG_FILES": "dir::/rtl/*.sv", # use previous lab's rtl
+    "CLOCK_PERIOD": 10, # controls speed target of the design. Use 10ns or 100ns to start.
+    # that means 1/CLOCK_PERIOD is the target freq. we are aiming for (in this case 10MHz!)
+    "CLOCK_PORT": "clk",
+    "FP_PDN_SKIPTRIM": true, # skips the metal trim step to remove metal stubs
+    "RUN_POST_GRT_RESIZER_TIMING": true,
+    "RUN_POST_GRT_DESIGN_REPAIR": true,
+    "SYNTH_AUTONAME": true, # Use to keep names consistent w/ my design's. Turn off for large designs.
+
+    # Die Area Sizing
+    "FP_SIZING": "absolute",
+    "DIE_AREA": [0, 0, 3000, 900],
+
+    # Telling what wires are power and not for the tools
+    "VDD_NETS": [
+        "VPWR"
+    ],
+    "GND_NETS": [
+        "VGND"
+    ],
+
+    # Macro netlist, layout, and timing file definitions (ADD THESE)
+    "MACROS": {
+      "DFFRAM256x32": {
+          "instances": {
+          "RAM0": {
+              "location": [100, 200], # 'x coord', 'y coord'
+              "orientation": "N" # "N,S,E,W, or flipped: FN, FS, etc."
+          },
+          "RAM1": {
+              "location": [1700, 200],
+              "orientation": "FN"
+          }
+        },
+        "gds": [
+            "dir::/macros/dffram256x32/layout/gds/DFFRAM256x32.gds"
+        ],
+        "lef": [
+            "dir::/macros/dffram256x32/layout/lef/DFFRAM256x32.lef"
+        ],
+        "spef": { # in timing
+            "max*": [
+            "dir::/macros/dffram256x32/timing/spef/DFFRAM256x32.max.spef" # macro.max.spef
+            ],
+            "min*": [
+            "dir::/macros/dffram256x32/timing/spef/DFFRAM256x32.min.spef" # macro.min.spef
+            ],
+            "nom*": [
+            "dir::/macros/dffram256x32/timing/spef/DFFRAM256x32.nom.spef" # macro.nom.spef
+            ]
+        },
+        "lib": { # "*": "dir::path_to/lib/max_ss_100C_1v60/macro__max_ss_100C_1v60.lib", we want the slowest in the worst conditions to test for clocking
+            "*": [
+                "dir::/macros/dffram256x32/timing/lib/max/DFFRAM256x32.Slowest.lib"
+            ]
+        },
+        "nl": [ # normally a .nl.v file though
+        "dir::/macros/dffram256x32/hdl/gl/DFFRAM256x32.v"
+        ],
+        "pnl": [ # normally a .pnl.v file though
+        "dir::/macros/dffram256x32/hdl/gl/DFFRAM256x32.v"
+        ]
+      }
+    },
+   
+    # Connecting Macros to Power
+    "PDN_MACRO_CONNECTIONS": [
+        "RAM0 VPWR VGND VPWR VGND",
+        "RAM1 VPWR VGND VPWR VGND"
+    ],
+
+    # Configurating PDN
+    "FP_PDN_VOFFSET": 5,
+    "FP_PDN_HOFFSET": 5,
+    "FP_PDN_VWIDTH": 3.1,
+    "FP_PDN_HWIDTH": 3.1,
+    "FP_PDN_VSPACING": 15.5,
+    "FP_PDN_HSPACING": 15.5,
+    "FP_PDN_VPITCH": 100,
+    "FP_PDN_HPITCH": 100,
+
+    # PDN Ring Configuration
+    "FP_PDN_CORE_RING": true,
+    "FP_PDN_CORE_RING_VWIDTH": 3.1,
+    "FP_PDN_CORE_RING_HWIDTH": 3.1,
+    "FP_PDN_CORE_RING_VOFFSET": 12.45,
+    "FP_PDN_CORE_RING_HOFFSET": 12.45,
+    "FP_PDN_CORE_RING_VSPACING": 1.7,
+    "FP_PDN_CORE_RING_HSPACING": 1.7,
+
+    # Antennae Violations checks (since the die is bigger)
+    "PL_RESIZER_ALLOW_SETUP_VIOS": true,
+    "GRT_RESIZER_ALLOW_SETUP_VIOS": true,
+    "GRT_ANTENNA_ITERS": 15,
+    "GRT_ANTENNA_MARGIN": 15,
+    "RUN_HEURISTIC_DIODE_INSERTION": true,
+    "DESIGN_REPAIR_MAX_WIRE_LENGTH": 800,
+    "PL_WIRE_LENGTH_COEF": 0.05,
+    "RUN_POST_GRT_DESIGN_REPAIR": true,
+    "DESIGN_REPAIR_MAX_SLEW_PCT": 30,
+    "DESIGN_REPAIR_MAX_CAP_PCT": 30,
+    "MAX_TRANSITION_CONSTRAINT": 1.5
+}
