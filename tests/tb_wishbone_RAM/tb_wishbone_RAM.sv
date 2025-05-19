@@ -61,6 +61,7 @@ logic[7:0] debug_dataA, debug_dataB;
 
 localparam NUM_TESTS = 100;
 always begin : MainTB
+    generateValues();
     resetTest();
     for(int i = 1; i != NUM_TESTS; i++) begin 
         $display("Testing %d of %d", i, NUM_TESTS);

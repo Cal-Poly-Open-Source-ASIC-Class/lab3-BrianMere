@@ -1,7 +1,7 @@
 {
     "DESIGN_NAME": "wishbone_RAM",
     "VERILOG_FILES": "dir::/rtl/*.sv", # use previous lab's rtl
-    "CLOCK_PERIOD": 10, # controls speed target of the design. Use 10ns or 100ns to start.
+    "CLOCK_PERIOD": 100, # controls speed target of the design. Use 10ns or 100ns to start.
     # that means 1/CLOCK_PERIOD is the target freq. we are aiming for (in this case 10MHz!)
     "CLOCK_PORT": "clk",
     "FP_PDN_SKIPTRIM": true, # skips the metal trim step to remove metal stubs
